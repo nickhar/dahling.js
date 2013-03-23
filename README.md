@@ -28,7 +28,7 @@ dahling.js provides two simple functions:
 <script type="text/javascript" src="dahling.js"></script>
 <script type="text/javascript">
 
-   if (dahling("screen and (max-width:800px)"){
+   if (dahling("screen and (max-width:800px)")){
       //do something for the screen
    }
 	 
@@ -36,7 +36,7 @@ dahling.js provides two simple functions:
       //react to portrait mode
    } 
 
-   if (dahling("screen and (max-width:481px)"){
+   if (dahling("screen and (max-width:481px)")){
       
    // Load required JS file based on max-width
       loadJS('mobile.js','body');
