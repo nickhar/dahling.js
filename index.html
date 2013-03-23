@@ -59,21 +59,7 @@
 <div class="highlight"><pre><span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">src=</span><span class="s">"dahling.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
 <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span><span class="nt">&gt;</span>
 
-   <span class="k">if</span> <span class="p">(</span><span class="nx">dahling</span><span class="p">(</span><span class="s2">"screen and (max-width:800px)"</span><span class="p">){</span>
-      <span class="c1">//do something for the screen, dahling</span>
-   <span class="p">}</span>
-
-   <span class="k">if</span> <span class="p">(</span><span class="nx">dahling</span><span class="p">(</span><span class="s2">"all and (orientation:portrait)"</span><span class="p">)){</span>
-      <span class="c1">//react to portrait mode, dahling</span>
-   <span class="p">}</span> 
-
    <span class="k">if</span> <span class="p">(</span><span class="nx">dahling</span><span class="p">(</span><span class="s2">"screen and (max-width:481px)"</span><span class="p">){</span>
-      <span class="c1">// Log notification to the console</span>
-      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"Less than 481px"</span><span class="p">);</span>
-
-      <span class="c1">// Alert the user</span>
-      <span class="nx">alert</span><span class="p">(</span><span class="s2">"Less than 481px"</span><span class="p">);</span>
-
       <span class="c1">// Load required JS file based on max-width</span>
       <span class="nx">loadJS</span><span class="p">(</span><span class="s1">'mobile.js'</span><span class="p">,</span><span class="s1">'body'</span><span class="p">);</span>
     <span class="p">}</span>
