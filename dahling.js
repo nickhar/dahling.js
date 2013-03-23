@@ -1,11 +1,9 @@
 
 /*
  *
- *
  * dahling.js
  *
  * It's just media dahling...
- *
  *
  */
 
@@ -28,7 +26,7 @@ var dahling = (function(){
 })();
  
 /*
- * Simple dahling usage, just pass in a CSS media query.
+ * Simple dahling usage - just pass in a CSS media query.
  *
  *	if (isMedia("screen and (max-width:800px)"){
  *	    //do something for the screen dahling
@@ -41,28 +39,22 @@ var dahling = (function(){
  */
 
 
-function loadJS(jsname,pos) {
-var th = document.getElementsByTagName(pos)[0];
-var s = document.createElement('script');
-s.setAttribute('type','text/javascript');
-s.setAttribute('src',jsname);
-th.appendChild(s);
-}
+    function loadJS(jsname,pos) {
+    var th = document.getElementsByTagName(pos)[0];
+    var s = document.createElement('script');
+    s.setAttribute('type','text/javascript');
+    s.setAttribute('src',jsname);
+    th.appendChild(s);
+    }
 
 /*
  * Ulterior motive and usage dahling:
  *
- *	if (dahling("screen and (max-width:800px)"){
+ *	if (dahling("screen and (max-width:481px)"){
  *	    //do something for gods sake
- *	        console.log("Less than 800px");
- *		loadJS('/js/bootstrap-spopover.js','body');
+ *	        console.log("Less than 481px");
+ *		loadJS('mobile.js','body');
  *	}
  *
  *
  */
-
-
-
-
-
-
