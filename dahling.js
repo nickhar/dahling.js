@@ -25,20 +25,6 @@ var dahling = (function(){
 	};
 })();
  
-/*
- * Simple dahling usage - just pass in a CSS media query.
- *
- *	if (isMedia("screen and (max-width:800px)"){
- *	    //do something for the screen dahling
- *	}
- *	 
- *	if (isMedia("all and (orientation:portrait)")){
- *	    //react to portrait mode dahling
- *	}
- *
- */
-
-
     function loadJS(jsname,pos) {
     var th = document.getElementsByTagName(pos)[0];
     var s = document.createElement('script');
@@ -46,15 +32,3 @@ var dahling = (function(){
     s.setAttribute('src',jsname);
     th.appendChild(s);
     }
-
-/*
- * Ulterior motive and usage dahling:
- *
- *	if (dahling("screen and (max-width:481px)"){
- *	    //do something for gods sake
- *	        console.log("Less than 481px");
- *		loadJS('mobile.js','body');
- *	}
- *
- *
- */
