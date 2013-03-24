@@ -66,6 +66,8 @@ dahling.js provides two simple functions at present:
 * Add generic classes for desktop, tablet, phone
 * Look at the ability to include queries for specific devices
 
+Forks and contributors welcomed.
+
 
 ## License
 
