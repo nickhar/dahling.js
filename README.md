@@ -4,7 +4,7 @@ dahling.js
 An ultra-simple and lightweight media query js/css loader (~1.4kb minified)
 
 
-* Author    : Nick Harrison <<https://github.com/nickhar>>
+* Author    : Nick Harrison @nickhar <<https://github.com/nickhar>>
 * Home      : http://nickhar.github.com/dahling.js
 * Source    : https://github.com/nickhar/dahling.js
 * License   : GPLv2 & MIT
