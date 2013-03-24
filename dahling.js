@@ -1,6 +1,6 @@
 /*
  * dahling.js
- * Dahling, It's just media queries...
+ * Dahling, you couldn't just do this for me could you
  *
  * By Nick Harrison | @nickhar
  * https://github.com/nickhar/dahling.js
