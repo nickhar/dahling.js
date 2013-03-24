@@ -1,7 +1,7 @@
 dahling.js
 ==========
 
-An ultra-simple and lightweight media query js/css loader
+An ultra-simple and lightweight media query js/css loader (~1.4kb)
 
 
 * Author    : Nick Harrison <<https://github.com/nickhar>>
