@@ -30,22 +30,15 @@ var dahling = (function(){
 
 })();
 
-
-
 // file loader
     function load(filename)
     {
 
-
 	if(filename.constructor == Array)
 	{
-		//console.log(filename);
-    
-    
+
 	    for (index = 0; index < filename.length; ++index)
 	    {
-		//console.log(filename[index]);
-    
     
 	// Get file extension
 	    var ext = filename[index].split('?')[0];
@@ -72,15 +65,10 @@ var dahling = (function(){
 		    document.getElementsByTagName("head")[0].appendChild(fileref)
 	    }
     
-    
 	}
-    
-    
     
     } else {
     
-    
-	    
 	// Get single file extension
 	    var ext = filename.split('?')[0];
 	    ext = ext.substr(ext.lastIndexOf('.')+1);
@@ -106,7 +94,5 @@ var dahling = (function(){
 		    document.getElementsByTagName("head")[0].appendChild(fileref)
 	    }
     
-    }	
+    }
 }
-	
-	
