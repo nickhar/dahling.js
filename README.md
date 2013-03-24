@@ -19,7 +19,7 @@ dahling.js provides two simple functions:
 ## Methods
 
 * `dahling()`
-* `loadJS()`
+* `load()`
 
 
 ## Examples
