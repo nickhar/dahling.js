@@ -1,7 +1,7 @@
 dahling.js
 ==========
 
-An ultra-simple and lightweight media query js loader
+An ultra-simple and lightweight media query js/css loader
 
 
 * Author    : Nick Harrison <<https://github.com/nickhar>>
@@ -11,7 +11,7 @@ An ultra-simple and lightweight media query js loader
 
 ## Features
  
-dahling.js provides two simple functions:
+dahling.js provides two simple functions at present:
 
  1. It determines if the browser is currently in a particular media mode (on load). Use the same media query as you would in CSS or in a `<link>` file.
  2. It provides the ability to load external plain or queried JS or CSS files - individually or as an array.
@@ -59,6 +59,13 @@ dahling.js provides two simple functions:
 
 </script>
 ```
+
+## Roadmap
+
+* Include addListeners - enabling loading/actions on media query state changes
+* Add generic classes for desktop, tablet, phone
+* Look at the ability to include queries for specific devices
+
 
 ## License
 
