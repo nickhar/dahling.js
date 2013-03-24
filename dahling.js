@@ -81,7 +81,7 @@ var dahling = (function(){
     
     
 	    
-	// Get single ile extension
+	// Get single file extension
 	    var ext = filename.split('?')[0];
 	    ext = ext.substr(ext.lastIndexOf('.')+1);
 	
