@@ -36,16 +36,24 @@ dahling.js provides two simple functions:
       //react to portrait mode
    } 
 
+
+// Load external files
    if (dahling("screen and (max-width:481px)")){
       
    // Load required JS file based on max-width
-      loadJS('mobile.js','body');
+      load('mobile.js');
+      
+   // Load several files
+      load(['mobile.js','mobile.css']);
+      
+   // Load queried files
+      load('mobile.js?123');
       
    // Log notification to the console
-      console.log("Less than 481px");
+      console.log("Mobile mode");
       
    // Alert the user
-      alert("Less than 481px");
+      alert("Mobile mode");
       
     }
 
