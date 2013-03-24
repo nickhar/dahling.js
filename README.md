@@ -11,10 +11,11 @@ An ultra-simple and lightweight media query js/css loader (~1.4kb minified)
 
 ## Features
  
-dahling.js provides two simple functions at present:
+dahling.js provides simple functions at present:
 
  1. It determines if the browser is currently in a particular media mode (on load). Use the same media query as you would in CSS or in a `<link>` file.
  2. It provides the ability to load external plain or queried JS or CSS files - individually or as an array.
+ 3. Load assets and accomplish other tasks using conditional logic.
 
 ## Methods
 
