@@ -13,8 +13,8 @@ An ultra-simple and lightweight media query js loader
  
 dahling.js provides two simple functions:
 
- 1. It determines if the browser is currently in a particular media mode. Use the same media query as you would in CSS or in a `<link>` file.
- 2. It provides the ability to load internal or external JS files.
+ 1. It determines if the browser is currently in a particular media mode (on load). Use the same media query as you would in CSS or in a `<link>` file.
+ 2. It provides the ability to load external plain or queried JS or CSS files - individually or as an array.
 
 ## Methods
 
