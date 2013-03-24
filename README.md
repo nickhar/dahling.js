@@ -55,7 +55,7 @@ dahling.js provides two simple functions:
    // Alert the user
       alert("Mobile mode");
       
-    }
+   }
 
 </script>
 ```
