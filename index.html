@@ -4,7 +4,7 @@
   <head>
     <meta charset='utf-8' />
     <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="Dahling.js : An ultra-simple and lightweight media query js loader" />
+    <meta name="description" content="Dahling.js : An ultra-simple and lightweight media query javascript loader" />
 
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
 
@@ -19,8 +19,7 @@
           <a id="forkme_banner" href="https://github.com/nickhar/dahling.js">View on GitHub</a>
 
           <h1 id="project_title">Dahling.js</h1>
-          <h2 id="project_tagline">An ultra-simple and lightweight media query js loader</h2>
-
+          <h2 id="project_tagline">An ultra-simple and lightweight media query javascript loader</h2>
 
             <section id="downloads">
               <a class="zip_download_link" href="https://github.com/nickhar/dahling.js/zipball/master">Download this project as a .zip file</a>
@@ -34,7 +33,7 @@
       <section id="main_content" class="inner">
         <h1>dahling.js</h1>
 
-<p>An ultra-simple and lightweight media query js loader</p>
+<p>An ultra-simple and lightweight media query js/css loader</p>
 
 <ul>
 <li>Author    : Nick Harrison &lt;<a href="https://github.com/nickhar">https://github.com/nickhar</a>&gt;</li>
@@ -45,29 +44,62 @@
 <li>License   : GPLv2 &amp; MIT</li>
 </ul><h2>Features</h2>
 
-<p>dahling.js provides two simple functions:</p>
+<p>dahling.js provides two simple functions at present:</p>
 
 <ol>
-<li>It determines if the browser is currently in a particular media mode. Use the same media query as you would in CSS or in a <code>&lt;link&gt;</code> file.</li>
-<li>It provides the ability to load internal or external JS files.</li>
-</ol>
+<li>It determines if the browser is currently in a particular media mode (on load). Use the same media query as you would in CSS or in a <code>&lt;link&gt;</code> file.</li>
+<li>It provides the ability to load external plain or queried JS or CSS files - individually or as an array.</li>
+</ol><h2>Methods</h2>
 
-<h2>Examples</h2>
+<ul>
+<li><code>dahling()</code></li>
+<li><code>load()</code></li>
+</ul><h2>Examples</h2>
 
 <div class="highlight"><pre><span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span> <span class="na">src=</span><span class="s">"dahling.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
 <span class="nt">&lt;script </span><span class="na">type=</span><span class="s">"text/javascript"</span><span class="nt">&gt;</span>
 
-   <span class="k">if</span> <span class="p">(</span><span class="nx">dahling</span><span class="p">(</span><span class="s2">"screen and (max-width:481px)"</span><span class="p">){</span>
-      <span class="c1">// Load required JS file based on max-width</span>
-      <span class="nx">loadJS</span><span class="p">(</span><span class="s1">'mobile.js'</span><span class="p">,</span><span class="s1">'body'</span><span class="p">);</span>
-    <span class="p">}</span>
+   <span class="k">if</span> <span class="p">(</span><span class="nx">dahling</span><span class="p">(</span><span class="s2">"screen and (max-width:800px)"</span><span class="p">)){</span>
+      <span class="c1">//do something for the screen</span>
+   <span class="p">}</span>
+
+   <span class="k">if</span> <span class="p">(</span><span class="nx">dahling</span><span class="p">(</span><span class="s2">"all and (orientation:portrait)"</span><span class="p">)){</span>
+      <span class="c1">//react to portrait mode</span>
+   <span class="p">}</span> 
+
+
+<span class="c1">// Load external files</span>
+   <span class="k">if</span> <span class="p">(</span><span class="nx">dahling</span><span class="p">(</span><span class="s2">"screen and (max-width:481px)"</span><span class="p">)){</span>
+
+   <span class="c1">// Load required JS file based on max-width</span>
+      <span class="nx">load</span><span class="p">(</span><span class="s1">'mobile.js'</span><span class="p">);</span>
+
+   <span class="c1">// Load several files</span>
+      <span class="nx">load</span><span class="p">([</span><span class="s1">'mobile.js'</span><span class="p">,</span><span class="s1">'mobile.css'</span><span class="p">]);</span>
+
+   <span class="c1">// Load queried files</span>
+      <span class="nx">load</span><span class="p">(</span><span class="s1">'mobile.js?123'</span><span class="p">);</span>
+
+   <span class="c1">// Log notification to the console</span>
+      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"Mobile mode"</span><span class="p">);</span>
+
+   <span class="c1">// Alert the user</span>
+      <span class="nx">alert</span><span class="p">(</span><span class="s2">"Mobile mode"</span><span class="p">);</span>
+
+   <span class="p">}</span>
 
 <span class="nt">&lt;/script&gt;</span>
 </pre></div>
 
-<h2>License</h2>
+<h2>Roadmap</h2>
 
-<p>Copyright © 2010-2013 Nick Harrison</p>
+<ul>
+<li>Include addListeners - enabling loading/actions on media query state changes</li>
+<li>Add generic classes for desktop, tablet, phone</li>
+<li>Look at the ability to include queries for specific devices</li>
+</ul><h2>License</h2>
+
+<p>Copyright © 2010-2013 Nick Harrison &lt;<a href="https://github.com/nickhar">https://github.com/nickhar</a>&gt;</p>
 
 <p>Permission is hereby granted, free of charge, to any person obtaining a copy of 
 this software and associated documentation files (the "Software"), to deal in 
