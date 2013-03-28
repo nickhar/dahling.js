@@ -49,6 +49,7 @@ dahling.js provides simple functions at present:
       
    // Load queried files
       load('mobile.js?123');
+      load('mobile.css?456');
       
    // Log notification to the console
       console.log("Mobile mode");
