@@ -47,7 +47,7 @@ dahling.js provides simple functions at present:
    // Load several files
       load(['mobile.js','mobile.css']);
       
-   // Load queried files
+   // Load versioned files
       load('mobile.js?123');
       load('mobile.css?456');
       
