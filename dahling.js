@@ -2,7 +2,6 @@
  * dahling.js
  * Dahling, you couldn't just do this for me could you
  *
- * By Nick Harrison | @nickhar
  * https://github.com/nickhar/dahling.js
  *
  * License : GPLv2 & MIT
@@ -10,12 +9,14 @@
  *
  */
 
-var dahling = (function(){
- 
+var dahling = (function()
+{
     var div;
 	
-    return function(query){
-	    if (!div){
+    return function(query)
+    {
+	    if (!div)
+	    {
 		    div = document.createElement("div");
 		    div.id = "dahlingjs";
 		    div.style.cssText = "position:absolute;top:-1000px";
@@ -34,38 +35,40 @@ var dahling = (function(){
     function load(filename)
     {
 
-	if(filename.constructor == Array)
+	if (filename.constructor == Array)
 	{
 
 	    for (index = 0; index < filename.length; ++index)
 	    {
-    
-	// Get file extension
-	    var ext = filename[index].split('?')[0];
-	    ext = ext.substr(ext.lastIndexOf('.')+1);
 	    
-	    if(ext == "js" || ext == "JS" || ext == "css" || ext == "CSS")
-	    {
-		filetype = ext;
+		// Get file extension
+		    var ext = filename[index].split('?')[0];
+		    ext = ext.substr(ext.lastIndexOf('.')+1);
+		    
+		    if (ext == "js" || ext == "JS" || ext == "css" || ext == "CSS")
+		    {
+				filetype = ext;
+		    
+			    
+				if (filetype == "js") 
+				{ //if filename is external JS file
+				    var fileref = document.createElement('script')
+				    fileref.setAttribute("type", "text/javascript")
+				    fileref.setAttribute("src", filename[index])
+				    //alert('called');
+				}
+				else if (filetype == "css") 
+				{ //if filename is external CSS file
+				    var fileref = document.createElement("link")
+				    fileref.setAttribute("rel", "stylesheet")
+				    fileref.setAttribute("type", "text/css")
+				    fileref.setAttribute("href", filename[index])
+				}
+				if (typeof fileref != "undefined")
+				    document.getElementsByTagName("head")[0].appendChild(fileref)
+		    }
     
-	    
-		if (filetype == "js") { //if filename is external JS file
-		    var fileref = document.createElement('script')
-		    fileref.setAttribute("type", "text/javascript")
-		    fileref.setAttribute("src", filename[index])
-		    //alert('called');
 		}
-		else if (filetype == "css") { //if filename is external CSS file
-		    var fileref = document.createElement("link")
-		    fileref.setAttribute("rel", "stylesheet")
-		    fileref.setAttribute("type", "text/css")
-		    fileref.setAttribute("href", filename[index])
-		}
-		if (typeof fileref != "undefined")
-		    document.getElementsByTagName("head")[0].appendChild(fileref)
-	    }
-    
-	}
     
     } else {
     
@@ -73,25 +76,27 @@ var dahling = (function(){
 	    var ext = filename.split('?')[0];
 	    ext = ext.substr(ext.lastIndexOf('.')+1);
 	
-	    if(ext == "js" || ext == "JS" || ext == "css" || ext == "CSS")
+	    if (ext == "js" || ext == "JS" || ext == "css" || ext == "CSS")
 	    {
-		filetype = ext;
-    
+			filetype = ext;
 	    
-		if (filetype == "js") { //if filename is external JS file
-		    var fileref = document.createElement('script')
-		    fileref.setAttribute("type", "text/javascript")
-		    fileref.setAttribute("src", filename)
-		    //alert('called');
-		}
-		else if (filetype == "css") { //if filename is external CSS file
-		    var fileref = document.createElement("link")
-		    fileref.setAttribute("rel", "stylesheet")
-		    fileref.setAttribute("type", "text/css")
-		    fileref.setAttribute("href", filename)
-		}
-		if (typeof fileref != "undefined")
-		    document.getElementsByTagName("head")[0].appendChild(fileref)
+		    
+			if (filetype == "js") 
+			{ //if filename is external JS file
+			    var fileref = document.createElement('script')
+			    fileref.setAttribute("type", "text/javascript")
+			    fileref.setAttribute("src", filename)
+			    //alert('called');
+			}
+			else if (filetype == "css") 
+			{ //if filename is external CSS file
+			    var fileref = document.createElement("link")
+			    fileref.setAttribute("rel", "stylesheet")
+			    fileref.setAttribute("type", "text/css")
+			    fileref.setAttribute("href", filename)
+			}
+			if (typeof fileref != "undefined")
+			    document.getElementsByTagName("head")[0].appendChild(fileref)
 	    }
     
     }
